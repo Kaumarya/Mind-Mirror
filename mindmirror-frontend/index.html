@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMirror - AI Mental Wellness Support</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-brain"></i>
+                <span>MindMirror</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="#">Home</a>
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#chat-section">Chat</a>
+                <a href="#emotion-section">Emotion Detection</a>
+                <a href="#resources">Resources</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="cta-button" id="openChat">Get Started</button>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1>Your Reflection Knows You Better</h1>
+                <p>AI-powered mental wellness support through personalized conversations and emotion recognition</p>
+                <div class="hero-buttons">
+                    <button class="hero-button primary-btn" id="heroChatBtn">
+                        <i class="fas fa-comment-dots"></i>
+                        Start Chat
+                    </button>
+                    <button class="hero-button secondary-btn" id="heroEmotionBtn">
+                        <i class="fas fa-camera"></i>
+                        Try Emotion Detection
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2 class="section-title">How MindMirror Helps You</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>AI-Powered Chat</h3>
+                        <p>Engage in meaningful conversations with our empathetic AI that understands and responds to your emotions.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Emotion Tracking</h3>
+                        <p>Monitor your emotional patterns over time with our advanced emotion recognition technology.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-assistive-listening-systems"></i>
+                        </div>
+                        <h3>Voice Analysis</h3>
+                        <p>Get insights from your tone of voice with our sophisticated voice emotion detection system.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Complete Privacy</h3>
+                        <p>Your data is encrypted and never shared with third parties. Your journey is completely confidential.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">About MindMirror</h2>
+                <div class="about-container">
+                    <div class="about-content">
+                        <p class="section-text">MindMirror is an AI-powered mental wellness platform that provides personalized support through conversational AI and emotion recognition technology. Our mission is to make mental health support accessible to everyone, anytime.</p>
+                        
+                        <p class="section-text">Using evidence-based therapeutic approaches like Cognitive Behavioral Therapy (CBT) and mindfulness techniques, MindMirror offers a safe space for users to express their feelings, gain insights, and develop coping strategies.</p>
+                        
+                        <div class="stats-container">
+                            <div class="stat-item">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">User Satisfaction</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Support Available</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="chat-section" class="chat-section">
+            <div class="container">
+                <h2 class="section-title">Chat with MindMirror AI</h2>
+                <div class="chat-container">
+                    <div class="text-chat">
+                        <div class="chat-header">
+                            <div class="ai-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div>
+                                <h3>MindMirror AI</h3>
+                                <p class="chat-status">Online - Ready to chat</p>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-messages">
+                            <div class="message bot-message">
+                                Hello there! I'm MindMirror, your mental wellness companion. How are you feeling today?
+                            </div>
+                            <div class="message user-message">
+                                I've been a bit anxious lately with work deadlines.
+                            </div>
+                            <div class="message bot-message">
+                                I understand. Work pressure can be challenging. Would you like to try some breathing exercises to help with the anxiety?
+                            </div>
+                            <div class="typing-indicator">
+                                <div class="typing-dot"></div>
+                                <div class="typing-dot"></div>
+                                <div class="typing-dot"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-input">
+                            <input type="text" placeholder="Type your message..." aria-label="Type your message">
+                            <button aria-label="Send message">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="emotion-section" class="emotion-section">
+            <div class="container">
+                <h2 class="section-title">Emotion Detection</h2>
+                <div class="emotion-container">
+                    <div class="emotion-detection">
+                        <div class="emotion-header">
+                            <h3>Video Session</h3>
+                        </div>
+                        
+                        <div class="video-container">
+                            <i class="fas fa-user" id="cameraPlaceholder"></i>
+                            <video id="videoElement" autoplay playsinline></video>
+                             <!-- <img src="http://127.0.0.1:8000/video_feed" width="400" height="400"> -->
+                            <div class="video-overlay">Camera off</div>
+                        </div>
+                        
+                        <div class="permission-status" id="cameraPermissionStatus"></div>
+                        <div class="permission-status" id="microphonePermissionStatus"></div>
+                        
+                        <div class="emotion-controls">
+                            <button class="control-button primary-control" id="toggleCamera">
+                                <i class="fas fa-video"></i>
+                                Start Camera
+                            </button>
+                            <button class="control-button secondary-control" id="toggleMicrophone">
+                                <i class="fas fa-microphone"></i>
+                                Enable Microphone
+                            </button>
+                        </div>
+
+                        <div class="results-container">
+                            <h4>Session Controls</h4>
+                            <div class="result-item">
+                                <span class="result-label">Session Duration</span>
+                                <span class="result-value" id="sessionDuration">00:00</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Frames Analyzed</span>
+                                <span class="result-value" id="framesAnalyzed">0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Voice Samples</span>
+                                <span class="result-value" id="voiceSamples">0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Current Emotion</span>
+                                <span class="result-value" id="currentEmotion">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="resources" class="resources-section">
+            <div class="container">
+                <h2 class="section-title">Mental Health Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card" onclick="openModal('meditationModal')">
+                        <div class="resource-icon">
+                            <i class="fas fa-meditation"></i>
+                        </div>
+                        <h3>Meditation Exercises</h3>
+                        <p>Practice mindfulness with our guided meditation sessions designed for all experience levels.</p>
+                        <a class="resource-link">
+                            Explore Exercises
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="resource-card" onclick="window.open('https://www.helpguide.org/', '_blank')">
+                        <div class="resource-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Self-Help Guides</h3>
+                        <p>Access evidence-based resources for managing anxiety, depression, and stress.</p>
+                        <a class="resource-link">
+                            Find Help
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="resource-card" onclick="window.open('https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health', '_blank')">
+                        <div class="resource-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Mental Health Tips</h3>
+                        <p>Learn how to care for your mental health with expert advice and strategies.</p>
+                        <a class="resource-link">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-brain"></i>
+                        <span>MindMirror</span>
+                    </a>
+                    <p>MindMirror provides AI-powered mental wellness support through personalized conversations and emotion recognition technology. Our mission is to make mental health support accessible to everyone.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#features"><i class="fas fa-chevron-right"></i> Features</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="#chat-section"><i class="fas fa-chevron-right"></i> Chat</a></li>
+                        <li><a href="#emotion-section"><i class="fas fa-chevron-right"></i> Emotion Detection</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Help Center</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Community</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-envelope"></i> support@mindmirror.com</a></li>
+                        <li><a href="#"><i class="fas fa-phone"></i> +1 (800) 123-4567</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> 123 Wellness St, Mind City</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Made by Mind Benders &copy; 2025 MindMirror. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <div id="meditationModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('meditationModal')">&times;</button>
+            <h3 class="modal-title">Meditation Exercises</h3>
+            <p class="modal-text">Try these meditation exercises to reduce stress and improve mental wellbeing:</p>
+            
+            <h4>1. Breathing Meditation (5 minutes)</h4>
+            <p class="modal-text">Focus on your breath to calm your mind and body:</p>
+            <ul class="modal-list">
+                <li>Sit comfortably with your back straight</li>
+                <li>Close your eyes and take a few deep breaths</li>
+                <li>Focus on the sensation of air moving in and out of your body</li>
+                <li>When your mind wanders, gently return your focus to your breath</li>
+            </ul>
+            
+            <h4>2. Body Scan Meditation (10 minutes)</h4>
+            <p class="modal-text">Bring awareness to each part of your body:</p>
+            <ul class="modal-list">
+                <li>Lie down or sit comfortably</li>
+                <li>Close your eyes and bring attention to your toes</li>
+                <li>Slowly move your attention up through your body</li>
+                <li>Notice any sensations without judgment</li>
+            </ul>
+            
+            <h4>3. Loving-Kindness Meditation (8 minutes)</h4>
+            <p class="modal-text">Cultivate feelings of compassion and kindness:</p>
+            <ul class="modal-list">
+                <li>Sit comfortably and close your eyes</li>
+                <li>Visualize yourself and repeat: "May I be happy, may I be healthy"</li>
+                <li>Extend these wishes to others in your life</li>
+                <li>Finally, extend them to all beings everywhere</li>
+            </ul>
+            
+            <p class="modal-text">For more guided meditations, visit <a href="https://www.uclahealth.org/uclamindful/guided-meditations" target="_blank">UCLA Mindful</a> or <a href="https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/how-to-meditate-for-beginners/" target="_blank">NHS Meditation Guide</a>.</p>
+        </div>
+    </div>
+    
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

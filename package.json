@@ -1,0 +1,13 @@
+{
+  "name": "mindmirror",
+  "version": "1.0.0",
+  "description": "AI mental wellness companion with emotion detection",
+  "scripts": {
+    "dev": "cd mindmirror-frontend && python -m http.server 8080",
+    "build": "echo 'Static site - no build needed'",
+    "vercel-build": "echo 'Static site ready for deployment'"
+  },
+  "keywords": ["mental-health", "ai", "emotion-detection", "wellness"],
+  "author": "",
+  "license": "MIT"
+}
