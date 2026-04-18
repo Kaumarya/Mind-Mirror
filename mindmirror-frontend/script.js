@@ -1,6 +1,15 @@
 // ==================== CONFIGURATION ====================
 // Use environment variable in production, localhost in development
-const API_BASE_URL = window.API_BASE_URL || 'http://localhost:8000';
+const API_BASE_URL = window.API_BASE_URL !== undefined ? window.API_BASE_URL : 'http://localhost:8000';
+
+// Helper function to build API URL
+function apiUrl(path) {
+    // If API_BASE_URL is empty, use relative path
+    if (!API_BASE_URL || API_BASE_URL === '') {
+        return path;
+    }
+    return `${API_BASE_URL}${path}`;
+}
 
 // ==================== THEME TOGGLE ====================
 const themeToggle = document.getElementById('themeToggle');
@@ -83,7 +92,7 @@ async function sendMessageToBackend(message) {
     showTypingIndicator();
     
     try {
-        const response = await fetch(`${API_BASE_URL}/api/chat`, {
+        const response = await fetch(apiUrl('/api/chat'), {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -320,7 +329,7 @@ async function analyzeCurrentFrame() {
         const imageData = canvas.toDataURL('image/jpeg', 0.8);
         
         // Send to backend
-        const response = await fetch(`${API_BASE_URL}/api/emotion/analyze_frame`, {
+        const response = await fetch(apiUrl('/api/emotion/analyze_frame'), {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ image: imageData })
@@ -344,7 +353,7 @@ async function analyzeCurrentFrame() {
 
 async function updateSessionStats() {
     try {
-        const response = await fetch(`${API_BASE_URL}/api/emotion/stats`);
+        const response = await fetch(apiUrl('/api/emotion/stats'));
         if (response.ok) {
             const data = await response.json();
             
@@ -380,7 +389,7 @@ async function updateSessionStats() {
 
 async function incrementVoiceSamples() {
     try {
-        await fetch(`${API_BASE_URL}/api/voice/analyze`, {
+        await fetch(apiUrl('/api/voice/analyze'), {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ action: 'increment' })
@@ -428,7 +437,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ==================== HEALTH CHECK ON LOAD ====================
 window.addEventListener('load', async () => {
     try {
-        const response = await fetch(`${API_BASE_URL}/api/health`, { 
+        const response = await fetch(apiUrl('/api/health'), { 
             method: 'GET',
             mode: 'cors'
         });

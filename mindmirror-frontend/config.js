@@ -4,16 +4,17 @@
 const CONFIG = {
     // Local development
     DEV_API_URL: 'http://localhost:8000',
-    
-    // Vercel production - API on same domain
-    PROD_API_URL: '',  // Empty = same domain for Vercel
-    
+
+    // Vercel production - API on same domain (empty = relative URL)
+    PROD_API_URL: '',
+
     // Get the appropriate API URL based on environment
     getApiUrl: function() {
         // Check if we're on localhost
-        const isLocalhost = window.location.hostname === 'localhost' || 
-                           window.location.hostname === '127.0.0.1';
-        
+        const isLocalhost = window.location.hostname === 'localhost' ||
+                           window.location.hostname === '127.0.0.1' ||
+                           window.location.hostname === '';
+
         return isLocalhost ? this.DEV_API_URL : this.PROD_API_URL;
     }
 };
