@@ -201,13 +201,11 @@ async def root():
         }
     }
 
+# For local development
 if __name__ == "__main__":
     import uvicorn
-    print("=" * 50)
-    print("MindMirror Backend (Development Mode)")
-    print("=" * 50)
-    print("API: http://localhost:8000")
-    print("Chat: POST http://localhost:8000/api/chat")
-    print("Stats: GET http://localhost:8000/api/emotion/stats")
-    print("=" * 50)
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
+# Vercel serverless handler
+from mangum import Mangum
+handler = Mangum(app)

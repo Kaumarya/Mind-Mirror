@@ -201,15 +201,11 @@ async def root():
         }
     }
 
-# Vercel serverless handler
-from fastapi import Request
-from fastapi.responses import JSONResponse as FastJSONResponse
-
 # For local development
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
 
-# For Vercel serverless
-from mangum import Handler
-handler = Handler(app)
+# Vercel serverless handler
+from mangum import Mangum
+handler = Mangum(app)
