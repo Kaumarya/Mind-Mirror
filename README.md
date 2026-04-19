@@ -1,8 +1,8 @@
-# MindMirror
+# MindMirror AI
 
 AI-powered mental wellness companion with real-time emotion detection through facial analysis and supportive chat interactions.
 
-![MindMirror Banner](https://img.shields.io/badge/MindMirror-Mental%20Wellness%20AI-blue?style=for-the-badge)
+![MindMirror Banner](https://img.shields.io/badge/MindMirror%20AI-Mental%20Wellness%20AI-blue?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.10+-green?style=flat&logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-teal?style=flat&logo=fastapi)
 ![Lightweight](https://img.shields.io/badge/No%20TensorFlow-lightweight-brightgreen?style=flat)
@@ -68,23 +68,28 @@ python -m http.server 8080
 
 Frontend runs on `http://localhost:8080`
 
+## 🚀 Live Demo
+
+**Deployed on Vercel:** [https://mind-mirror-ai.vercel.app](https://mind-mirror-ai.vercel.app)
+
 ## Deployment (Vercel - Both Frontend + Backend)
 
-### One-Click Deploy to Vercel
-
 This project is configured for **full-stack deployment** on Vercel (frontend + backend together):
+
+### One-Click Deploy
 
 1. **Push code to GitHub**
 2. **Import to Vercel:**
    - Go to [vercel.com](https://vercel.com)
    - Click "Add New Project"
-   - Import your GitHub repo
+   - Import your GitHub repo `Kaumarya/Mind-Mirror-AI`
 3. **Deploy**
+   - Framework Preset: **Other**
    - Vercel automatically detects the configuration
    - Frontend served from `mindmirror-frontend/`
    - Backend API served from `api/index.py` at `/api/*`
 
-Your app will be live at `https://your-project.vercel.app`
+Your app will be live at `https://mind-mirror-ai.vercel.app`
 
 ### Local Development
 
@@ -120,10 +125,8 @@ python -m http.server 8080
 **Backend:**
 - Python 3.10+
 - FastAPI
-- FER (Facial Emotion Recognition)
-- TensorFlow / TensorFlow Lite
-- MTCNN (face detection)
-- OpenCV
+- Mangum (AWS Lambda/Vercel adapter)
+- Lightweight mock emotion detection (no ML libraries required)
 
 ## Emotion Categories Detected
 
